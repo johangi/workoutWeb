@@ -1,25 +1,25 @@
-import { Link, Outlet } from "react-router-dom";
-import './App.css';
+import { NavLink, Outlet } from "react-router-dom";
+import './styles/Layout.css';
 
-function App() {
+function Layout() {
   return (
     <div>
-        <nav>
+      <nav className="navbar">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/" activeClassName="active-link" exact>Home</NavLink>
           </li>
           <li>
-            <Link to="/chest">Chest</Link>
+            <NavLink to="/chest" activeClassName="active-link">Chest</NavLink>
           </li>
           <li>
-            <Link to="/back">Back</Link>
+            <NavLink to="/back" activeClassName="active-link">Back</NavLink>
           </li>
           <li>
-            <Link to="/abs">Abs</Link>
+            <NavLink to="/abs" activeClassName="active-link">Abs</NavLink>
           </li>
           <li>
-            <Link to="/legs">Legs</Link>
+            <NavLink to="/legs" activeClassName="active-link">Legs</NavLink>
           </li>
         </ul>
       </nav>
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default Layout;
